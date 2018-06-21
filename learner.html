@@ -11,21 +11,12 @@
 		}
 	</script>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
 	<meta charset="utf-8" />
-
 	<script src="dist/geolib.js"></script>
 	<script src="dist/geolib.isPointInsideRobust.js"></script>
-
 	<script>
-		$(function() {
-
-		});
+		$(function() {});
 	</script>
-
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-
-
 	<link rel="stylesheet" href="css/visitor.css">
 </head>
 
@@ -47,13 +38,9 @@
 				<h6>Thank you for visiting the LibMobile App!</h6>
 			</ul>
 		</div>
-
-		<!--a href="https://github.com/manuelbieh/geolib"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a-->
-
 		<div id="wrapper">
-
 			<div class="content">
-				<h1 class="visitor">Student Page</h1>
+				<h1 class="visitor">Learners Page</h1>
 				<hr style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
 				<div class="box" id="distance">
 					<div class="inner">
@@ -65,43 +52,32 @@
 						</select>.
 						</p>
 						<br>
-
-						<hr style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
-
-						<h2>Distance calculation for locations</h2>
-						<p>Calculate distance from<br> <select name="city1"><option></option></select> to<br> <select name="city2"><option></option></select>.</p>
+						<hr class="linebre" style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
+						<h2>Distance calculation for your locations</h2>
+						<p>Please select your location<br>
+							<select name="city1"><option></option></select>
+							<br> The library location that you want to visit:
+							<br> <select name="city2"><option></option></select>.</p>
 						<p class="result"></p>
 					</div>
 				</div>
-
 				<div class="box">
 					<div class="inner">
-						<hr style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
+						<hr class="linebre" style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
 						<h2>What's nearby library?</h2>
 						<p>
-							To show the nearest Community and Regional libraries near your location:
+							To show the nearest Community libraries near your location:
 							<br>
 							<br> Select your location below:
 							<br>
-							<p>
-								<select name="city3"><option></option></select>
-								<br>
-							</p>
-							<p id="nearest"></p>
+							<select name="city3"><option></option></select>
+							<br>
+						</p>
+						<p id="nearest"></p>
 					</div>
 				</div>
-
-
-				<div class='box'>
-					<div id="mapid"></div>
-
-				</div>
-
-
 			</div>
-
 		</div>
-
 		<script>
 			$(function() {
 				var cities = {
@@ -113,29 +89,17 @@
 						latitude: 18.35168538,
 						longitude: -34.14861945
 					},
-					"Kommetjie , Western Cape": {
+					"Kommetjie, Western Cape": {
 						latitude: 18.32418372,
 						longitude: -34.14107253
 					},
-					"Fish Hoek , Western Cape": {
-						latitude: 18.4262567,
-						longitude: -34.13654747
-					},
-					"Muizenberg , Western Cape": {
+					"Muizenberg, Western Cape": {
 						latitude: 18.47074576,
 						longitude: -34.1067818
 					},
-					"Hangberg , Western Cape": {
+					"Hangberg, Western Cape": {
 						latitude: 18.34198515,
 						longitude: -34.05339814
-					},
-					"Masakhane , Western Cape": {
-						latitude: 18.66870343,
-						longitude: -34.04708542
-					},
-					"Imizamo Yethu, Western Cape": {
-						latitude: 18.36017137,
-						longitude: -34.02982609
 					},
 					"Hout Bay, Western Cape": {
 						latitude: 18.35836097,
@@ -149,61 +113,53 @@
 						latitude: 18.59694877,
 						longitude: -33.99829735
 					},
-					"Wesfleur, Western Cape": {
-						latitude: 18.493912,
-						longitude: -33.56476809
-					},
-					" Mamre, Western Cape": {
+					"Mamre, Western Cape": {
 						latitude: 18.4764602,
 						longitude: -33.51336321
 					},
-					" Avondale, Western Cape": {
+					"Avondale, Western Cape": {
 						latitude: 18.48596708,
 						longitude: -33.57066369
 					},
-					" Koeberg, Western Cape": {
+					"Koeberg, Western Cape": {
 						latitude: 18.44599113,
 						longitude: -33.69311487
 					},
-					" Moses Mabhida, Western Cape": {
+					"Moses Mabhida, Western Cape": {
 						latitude: 18.65105351,
 						longitude: -34.01362094
 					},
-					" Mfuleni, Western Cape": {
+					"Mfuleni, Western Cape": {
 						latitude: 18.68194942,
 						longitude: -34.00394126
 					},
-					" 	Brown's Farm, Western Cape": {
+					"Brown's Farm, Western Cape": {
 						latitude: 18.58538859,
 						longitude: -34.00561138
 					},
-					" Phillipi East, Western Cape": {
+					"Phillipi East, Western Cape": {
 						latitude: 18.60783875,
 						longitude: -34.01015166
 					},
-					" Maitland, Western Cape": {
+					"Maitland, Western Cape": {
 						latitude: 18.48707473,
 						longitude: -33.9235559
 					},
-					"Gordon's Bay , Western Cape": {
+					"Gordon's Bay, Western Cape": {
 						latitude: 18.87018468,
 						longitude: -34.15708177
 					},
-					"Suider Strand , Western Cape": {
+					"Suider Strand, Western Cape": {
 						latitude: 18.84138728,
 						longitude: -34.12796685
 					},
-					"Strand , Western Cape": {
+					"Strand, Western Cape": {
+						latitude: 18.83000612,
+						longitude: -34.11447245
+					},
+					"Helderzicht, Western Cape": {
 						latitude: 18.83477516,
 						longitude: -34.08915583
-					},
-					"Strand , Western Cape": {
-						latitude: 18.84900011,
-						longitude: -34.08400518
-					},
-					"Somerset West , Western Cape": {
-						latitude: 18.84900011,
-						longitude: -34.08400518
 					},
 					"Strandfontein, Western Cape": {
 						latitude: 18.55453144,
@@ -213,93 +169,57 @@
 						latitude: 18.61130956,
 						longitude: -34.06456709
 					},
-					"Tokai, Western Cape": {
-						latitude: 18.43873418,
-						longitude: -34.06320128
-					},
 					"Tafelsig, Western Cape": {
 						latitude: 18.63699329,
 						longitude: -34.06191143
 					},
-					"Pelican Park , Western Cape": {
-						latitude: 18.52709733,
-						longitude: -34.06182357
-					},
-					"Macassar , Western Cape": {
+					"Macassar, Western Cape": {
 						latitude: 18.76356549,
 						longitude: -34.06263711
 					},
-					"Retreat , Western Cape": {
+					"Retreat, Western Cape": {
 						latitude: 18.47618764,
 						longitude: -34.06299394
 					},
-					"Retreat , Western Cape": {
+					"Westridge, Western Cape": {
 						latitude: 18.60295414,
 						longitude: -34.05218937
-					},
-					"Mitchell's Plain , Western Cape": {
-						latitude: 18.62346141,
-						longitude: -34.04867507
-					},
-					"Grassy Park	 , Western Cape": {
-						latitude: 18.4956521,
-						longitude: -34.04906935
 					},
 					"Kulani, Western Cape": {
 						latitude: 18.66014392,
 						longitude: -34.04236738
 					},
-					"Meadowridge, Western Cape": {
-						latitude: 18.45424306,
-						longitude: -34.03911947
-					},
 					"Lotus River, Western Cape": {
 						latitude: 18.52014717,
 						longitude: -34.04131441
 					},
-					"Ottery , Western Cape": {
-						latitude: 18.51646303,
-						longitude: -34.02842626
-					},
-					"Ottery , Western Cape": {
+					"Weltevreden, Western Cape": {
 						latitude: 18.57977644,
 						longitude: -34.01827679
 					},
-					"Weltevreden , Western Cape": {
-						latitude: 18.57977644,
-						longitude: -34.01827679
-					},
-					"Khayelitsha , Western Cape": {
+					"Khayelitsha, Western Cape": {
 						latitude: 18.6655944,
 						longitude: -34.02614266
 					},
-					"Lentegeur , Western Cape": {
+					"Lentegeur, Western Cape": {
 						latitude: 18.60978347,
 						longitude: -34.03380225
 					},
-					"Plumstead , Western Cape": {
+					"Plumstead, Western Cape": {
 						latitude: 18.46782409,
 						longitude: -34.02099283
 					},
-					"Southfield , Western Cape": {
+					"Southfield, Western Cape": {
 						latitude: 18.4807621,
 						longitude: -34.03023781
 					},
-					"Eersteriver , Western Cape": {
-						latitude: 18.72465962,
-						longitude: -34.00877047
+					"Eersteriver, Western Cape": {
+						latitude: 18.6655944,
+						longitude: -34.02614266
 					},
-					"Wynberg , Western Cape": {
-						latitude: 18.46760428,
-						longitude: -34.00522959
-					},
-					"Hanover Park , Western Cape": {
+					"Hanover Park, Western Cape": {
 						latitude: 18.52725235,
 						longitude: -33.99480901
-					},
-					"	Melton Rose , Western Cape": {
-						latitude: 18.71693763,
-						longitude: -33.98775837
 					},
 					"Lansdowne, Western Cape": {
 						latitude: 18.50520564,
@@ -313,10 +233,6 @@
 						latitude: 18.63921345,
 						longitude: -33.98600372
 					},
-					"Claremont, Western Cape": {
-						latitude: 18.46741317,
-						longitude: -33.98538553
-					},
 					"Manenberg, Western Cape": {
 						latitude: 18.55555152,
 						longitude: -33.99155846
@@ -325,25 +241,9 @@
 						latitude: 18.53436934,
 						longitude: -33.97044301
 					},
-					"Delft, Western Cape": {
-						latitude: 18.64288956,
-						longitude: -33.97357894
-					},
-					"Guguletu, Western Cape": {
-						latitude: 18.56719756,
-						longitude: -33.97681587
-					},
-					"Athlone, Western Cape": {
-						latitude: 18.50480187,
-						longitude: -33.96067227
-					},
 					"Heideveld, Western Cape": {
 						latitude: 18.55357426,
 						longitude: -33.96490838
-					},
-					"Rondebosch, Western Cape": {
-						latitude: 18.47187734,
-						longitude: -33.96137552
 					},
 					"Bridgetown, Western Cape": {
 						latitude: 18.5275876,
@@ -361,10 +261,6 @@
 						latitude: 18.47100678,
 						longitude: -33.94912127
 					},
-					"Bishop Lavis, Western Cape": {
-						latitude: 18.58315417,
-						longitude: -33.94925165
-					},
 					"Bonteheuwel, Western Cape": {
 						latitude: 18.55239964,
 						longitude: -33.95145231
@@ -377,14 +273,6 @@
 						latitude: 18.61465799,
 						longitude: -33.94421554
 					},
-					"Adriaanse, Western Cape": {
-						latitude: 18.58475578,
-						longitude: -33.93756723
-					},
-					"Vredehoek, Western Cape": {
-						latitude: 18.42714387,
-						longitude: -33.93750558
-					},
 					"Observatory, Western Cape": {
 						latitude: 18.47047918,
 						longitude: -33.93793033
@@ -392,14 +280,6 @@
 					"Kloof Street, Western Cape": {
 						latitude: 18.40663307,
 						longitude: -33.93497936
-					},
-					"Paulse, Western Cape": {
-						latitude: 18.67172195,
-						longitude: -33.93157914
-					},
-					"Pinelands, Western Cape": {
-						latitude: 18.51156236,
-						longitude: -33.93432219
 					},
 					"Kuilsriver, Western Cape": {
 						latitude: 18.67822409,
@@ -409,97 +289,17 @@
 						latitude: 18.45028807,
 						longitude: -33.92877612
 					},
-					"Woodstock, Western Cape": {
-						latitude: 18.45028807,
-						longitude: -33.92877612
-					},
 					"Elsies River, Western Cape": {
 						latitude: 18.57399974,
 						longitude: -33.92896065
-					},
-					"Ravensmead, Western Cape": {
-						latitude: 18.60333965,
-						longitude: -33.92240664
 					},
 					"Bellville South, Western Cape": {
 						latitude: 18.6426775,
 						longitude: -33.91524959
 					},
-					"Kensington, Western Cape": {
-						latitude: 18.51163727,
-						longitude: -33.90947026
-					},
-					"Brooklyn, Western Cape": {
-						latitude: 18.48999439,
-						longitude: -33.90039143
-					},
-					"Bellville, Western Cape": {
-						latitude: 18.62440363,
-						longitude: -33.90222577
-					},
-					"Goodwood, Western Cape": {
-						latitude: 18.55059631,
-						longitude: -33.91131233
-					},
-					"Parow, Western Cape": {
-						latitude: 18.58710964,
-						longitude: -33.90325917
-					},
-					"Tygervalley, Western Cape": {
-						latitude: 18.63429994,
-						longitude: -33.874461
-					},
-					"Edgemead, Western Cape": {
-						latitude: 18.54279627,
-						longitude: -33.8804455
-					},
-					"Scottsdene, Western Cape": {
-						latitude: 18.72150099,
-						longitude: -33.866623
-					},
-					"Milnerton, Western Cape": {
-						latitude: 18.49795861,
-						longitude: -33.86819226
-					},
-					"Eikendal, Western Cape": {
-						latitude: 18.72196108,
-						longitude: -33.8525197
-					},
-					"Bothasig, Western Cape": {
-						latitude: 18.54377239,
-						longitude: -33.8625753
-					},
 					"Kraaifontein, Western Cape": {
 						latitude: 18.70548133,
 						longitude: -33.84124917
-					},
-					"Durbanville, Western Cape": {
-						latitude: 18.64487048,
-						longitude: -33.82975281
-					},
-					"Table View, Western Cape": {
-						latitude: 18.48816625,
-						longitude: -33.82777057
-					},
-					"Bloubergstrand, Western Cape": {
-						latitude: 18.46021659,
-						longitude: -33.80099663
-					},
-					"Sir Lowry's Pass, Western Cape": {
-						latitude: 18.9078949,
-						longitude: -34.1195685
-					},
-					"Brakenfell, Western Cape": {
-						latitude: 18.68824381,
-						longitude: -33.87664545
-					},
-					"Leonsdale, Western Cape": {
-						latitude: 18.57569542,
-						longitude: -33.91943353
-					},
-					"Lwandle, Western Cape": {
-						latitude: 18.86488685,
-						longitude: -34.11856797
 					},
 					"Sea Point, Western Cape": {
 						latitude: 18.39776526,
@@ -509,25 +309,33 @@
 						latitude: 18.42367592,
 						longitude: -33.9252791
 					},
-					"Nazeema Isaacs, Western Cape": {
-						latitude: 18.70452824,
-						longitude: -34.04741615
-					},
-					"Masiphumilele, Western Cape": {
-						latitude: 18.37815372,
-						longitude: -34.1283051
-					},
-					"Fisantekraal, Western Cape": {
-						latitude: 18.71741369,
-						longitude: -33.78239463
-					},
 					"Harare, Western Cape": {
 						latitude: 18.67135539,
 						longitude: -34.05836239
 					},
-					"Harare, Western Cape": {
-						latitude: 18.67135539,
-						longitude: -34.05836239
+					"Bellville South, Western Cape": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
+					},
+					"Bellville South, Western Cape": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
+					},
+					"Bellville South, Western Cape": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
+					},
+					"Bellville South, Western Cape": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
+					},
+					"Bellville South, Western Cape": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
+					},
+					"Bellville South, Western Cape": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
 					},
 					"": {
 						latitude: -34.916667,
@@ -634,6 +442,9 @@
 						longitude: -77.036667
 					},
 				};
+				console.log(geolib.useDecimal({
+					dortmund: cities['Dortmund, Germany']
+				}));
 				// Data taken from GADM.org
 				var colorado = [{
 					lng: -104.139907836914,
@@ -1617,6 +1428,7 @@
 					lng: -104.139907836914,
 					lat: 41.0018997192384
 				}];
+				console.log('Is Denver (' + JSON.stringify(cities['Denver, CO']) + ') in Colorado?', geolib.isPointInside(cities['Denver, CO'], colorado));
 				var unitLabels = {
 					"m": "Meters",
 					"km": "Kilometers",
@@ -1675,7 +1487,9 @@
 					}
 				});
 				$('select[name="city1"]').on('change', function() {
+
 					var val = $('select[name="city1"]').val();
+
 					$('select[name="city2"]').find('option').removeAttr('disabled');
 					$('select[name="city2"]').find('option[value="' + val + '"]').attr('disabled', 'disabled');
 				});
@@ -1712,6 +1526,7 @@
 							if (nearme.length === 0) {} else {
 								var result = 'Some cities near you might be:<ul>';
 								var unit = $('[name="unit"]').val();
+
 								nearme.forEach(function(val) {
 									result += '<li><strong>' + val.key + '</strong> (' + geolib.convertUnit(unit, val.distance) + unit + ')</li>';
 								});
@@ -1771,27 +1586,5 @@
 			});
 		</script>
 </body>
-<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
-<script>
-	var mymap = L.map('mapid').setView([-33.918861, 18.423300], 13);
-	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		maxZoom: 18,
-		id: 'mapbox.streets',
-		accessToken: 'pk.eyJ1Ijoic2liYTAyIiwiYSI6ImNqaW9pdml4aDBrbGozcHBvbnlmeTJsYjQifQ.A8I9MZwleRAWMznkNLwa9A'
-	}).addTo(mymap);
-	var libraryLat = geolib.latitude(cities[$('[name="city1"] option:selected').text()]);
-	var librayLog = geolib.longitude(cities[$('[name="city1"] option:selected').text()]);
-	console.log(libraryLat);
-	console.log(libraryLog);
-	var libraryLat2 = geolib.latitude(cities[$('[name="city2"] option:selected').text()]);
-	var librayLog2 = geolib.longitude(cities[$('[name="city2"] option:selected').text()]);
-	var marker1 = L.marker([-33.918861, 18.423300]).addTo(mymap);
-	var marker2 = L.marker([-34.00561138, 18.58538859]).addTo(mymap);
-
-	function coOrdData(data) {
-		return L.marker([data.lat, ]).addTo(mymap);
-	}
-</script>
 
 </html>

@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<<<<<<< HEAD
 <title>LibraryFinder</title>
+=======
+	<title>LibMobile</title>
+>>>>>>> d19460625d33cdda5bb6480ba623f06e255668b0
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
-<script>
-if(typeof $ == 'undefined') {
-	document.write('<scri'+'pt src="jquery.min.js"></scri'+'pt>');
-}
-</script>
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+	<script>
+		if (typeof $ == 'undefined') {
+			document.write('<scri' + 'pt src="jquery.min.js"></scri' + 'pt>');
+		}
+	</script>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
-<meta charset="utf-8" />
+	<meta charset="utf-8" />
 
-<script src="dist/geolib.js"></script>
-<script src="css/normalize.css"></script>
-<script src="css/skeleton.css"></script>
-<script src="dist/geolib.isPointInsideRobust.js"></script>
+	<script src="dist/geolib.js"></script>
+	<script src="css/normalize.css"></script>
+	<script src="css/skeleton.css"></script>
+	<script src="dist/geolib.isPointInsideRobust.js"></script>
 
-<script>
-$(function() {
+	<script>
+		$(function() {
 
-});
-</script>
-<link rel="stylesheet" href="css/visitor.css">
+		});
+	</script>
+	<link rel="stylesheet" href="css/visitor.css">
 
 </head>
 <container>
+<<<<<<< HEAD
 <body>
 	<div class="header">
 	  <div class="row">
@@ -88,556 +94,620 @@ $(function() {
 				</p>
 				<br>
 				<p id="nearest"></p>
+=======
+
+	<body>
+		<div class="header">
+			<div class="row">
+				<ul>
+					<li style="float:right" class="dropdown">
+						<a href="#projects" class="dropbtn">Category</a>
+						<div class="dropdown-content">
+							<a href="learner.html">Learner</a>
+							<a href="student.html">Student</a>
+							<a href="visitor.html">Visitor</a>
+
+						</div>
+					</li>
+					<li style="float:right"><a href="">About</a></li>
+					<li style="float:right"><a href="index.html" class="active">Home</a></li>
+					<h6>Thank you for visiting the LibMobile App!</h6>
+				</ul>
+>>>>>>> d19460625d33cdda5bb6480ba623f06e255668b0
+			</div>
+		</div>
+		<div id="wrapper">
+
+			<div class="content">
+
+				<h1 class="visitor">Visitors Page</h1>
+				<hr style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
+				<div class="box" id="distance">
+					<div class="inner">
+
+						<h4 class="conversions">Conversions</h4>
+						<br>
+						<p>Show all distances in
+							<br>
+							<select name="unit">
+							<option value="km">Kilometers (km)</option><option value="m">Meters (m)</option><option value="cm">Centimeter (cm)</option><option value="mm">Millimeters (mm)</option><option value="mi">Miles (mi)</option><option value="sm">Seamiles (sm)</option><option value="ft">Feet (ft)</option><option value="in">Inches (in)</option><option value="yd">Yards (yd)</option>
+						</select>.
+						</p>
+						<br>
+						<hr class="linebre" style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
+						<h2>Distance calculation from your location to the next library you want to visit:</h2>
+						<p>Please select your location<br> <select name="city1"><option></option></select>
+							<br> The library location that you want to visit:
+							<br>
+							<select name="city2"><option></option></select>.</p>
+						<br>
+						<p class="result"></p>
+					</div>
+				</div>
+				<hr style="margin-top: 1%;margin-bottom:1%;margin-right:20%;">
+				<div class="box">
+					<div class="inner">
+						<h2>Nearby library</h2>
+						<p>
+							To show the nearest Community and Regional libraries near your location:
+							<br>
+							<br> Select your location below:
+							<br>
+							<select name="city3"><option></option></select>
+						</p>
+						<br>
+						<p id="nearest"></p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
-	</div>
-</div>
+		<script>
+			$(function() {
+				var cities = {
+					"Simon's Town , Community Library": {
+						latitude: 18.43675782,
+						longitude: -34.19380909
+					},
+					"Ocean View, Community Library": {
+						latitude: 18.35168538,
+						longitude: -34.14861945
+					},
+					"Kommetjie , Community Library": {
+						latitude: 18.32418372,
+						longitude: -34.14107253
+					},
+					"Fish Hoek , Regional Library": {
+						latitude: 18.4262567,
+						longitude: -34.13654747
+					},
+					"Muizenberg , Community Library": {
+						latitude: 18.47074576,
+						longitude: -34.1067818
+					},
+					"Hangberg , Community Library": {
+						latitude: 18.34198515,
+						longitude: -34.05339814
+					},
+					"Masakhane , Regional Library": {
+						latitude: 18.66870343,
+						longitude: -34.04708542
+					},
+					"Imizamo Yethu, Satellite Library": {
+						latitude: 18.36017137,
+						longitude: -34.02982609
+					},
+					"Hout Bay, Community Library": {
+						latitude: 18.35836097,
+						longitude: -34.04399894
+					},
+					"Camps Bay, Community Library": {
+						latitude: 18.37765926,
+						longitude: -33.95378538
+					},
+					"Crossroads, Community Library": {
+						latitude: 18.59694877,
+						longitude: -33.99829735
+					},
+					"Wesfleur, Regional Library": {
+						latitude: 18.493912,
+						longitude: -33.56476809
+					},
+					" Mamre, Community Library": {
+						latitude: 18.4764602,
+						longitude: -33.51336321
+					},
+					" Avondale, Community Library": {
+						latitude: 18.48596708,
+						longitude: -33.57066369
+					},
+					" Koeberg, Community Library": {
+						latitude: 18.44599113,
+						longitude: -33.69311487
+					},
+					" Moses Mabhida, Community Library": {
+						latitude: 18.65105351,
+						longitude: -34.01362094
+					},
+					" Mfuleni, Community Library": {
+						latitude: 18.68194942,
+						longitude: -34.00394126
+					},
+					" 	Brown's Farm, Community Library": {
+						latitude: 18.58538859,
+						longitude: -34.00561138
+					},
+					" Phillipi East, Community Library": {
+						latitude: 18.60783875,
+						longitude: -34.01015166
+					},
+					" Maitland, Community Library": {
+						latitude: 18.48707473,
+						longitude: -33.9235559
+					},
+					"Gordon's Bay , Community Library": {
+						latitude: 18.87018468,
+						longitude: -34.15708177
+					},
+					"Suider Strand , Community Library": {
+						latitude: 18.84138728,
+						longitude: -34.12796685
+					},
+					"Strand , Community Library": {
+						latitude: 18.83000612,
+						longitude: -34.11447245
+					},
+					"Helderzicht , Community Library": {
+						latitude: 18.83477516,
+						longitude: -34.08915583
+					},
+					"Somerset West , Regional Library": {
+						latitude: 18.84900011,
+						longitude: -34.08400518
+					},
+					"Strandfontein, Community Library": {
+						latitude: 18.55453144,
+						longitude: -34.07209846
+					},
+					"Rocklands, Community Library": {
+						latitude: 18.61130956,
+						longitude: -34.06456709
+					},
+					"Tokai, Community Library": {
+						latitude: 18.43873418,
+						longitude: -34.06320128
+					},
+					"Tafelsig, Community Library": {
+						latitude: 18.63699329,
+						longitude: -34.06191143
+					},
+					"Pelican Park ,Satellite Library": {
+						latitude: 18.52709733,
+						longitude: -34.06182357
+					},
+					"Macassar , Community Library": {
+						latitude: 18.76356549,
+						longitude: -34.06263711
+					},
+					"Retreat , Community Library": {
+						latitude: 18.47618764,
+						longitude: -34.06299394
+					},
+					"Westridge , Community Library": {
+						latitude: 18.60295414,
+						longitude: -34.05218937
+					},
+					"Mitchell's Plain , Regional Library": {
+						latitude: 18.62346141,
+						longitude: -34.04867507
+					},
+					"Grassy Park, Regional Library": {
+						latitude: 18.4956521,
+						longitude: -34.04906935
+					},
+					"Kulani, Community Library": {
+						latitude: 18.66014392,
+						longitude: -34.04236738
+					},
+					"Meadowridge, Regional Library": {
+						latitude: 18.45424306,
+						longitude: -34.03911947
+					},
+					"Lotus River, Community Library": {
+						latitude: 18.52014717,
+						longitude: -34.04131441
+					},
+					"Ottery , Satellite Library": {
+						latitude: 18.51646303,
+						longitude: -34.02842626
+					},
+					"Weltevreden , Community Library ": {
+						latitude: 18.57977644,
+						longitude: -34.01827679
+					},
+					"Khayelitsha , Community Library": {
+						latitude: 18.6655944,
+						longitude: -34.02614266
+					},
+					"Lentegeur , Community Library": {
+						latitude: 18.60978347,
+						longitude: -34.03380225
+					},
+					"Plumstead , Community Library": {
+						latitude: 18.46782409,
+						longitude: -34.02099283
+					},
+					"Southfield , Community Library": {
+						latitude: 18.4807621,
+						longitude: -34.03023781
+					},
+					"Eersteriver , Community Library": {
+						latitude: 18.72465962,
+						longitude: -34.00877047
+					},
+					"Wynberg , Regional Library": {
+						latitude: 18.46760428,
+						longitude: -34.00522959
+					},
+					"Hanover Park , Community Library": {
+						latitude: 18.52725235,
+						longitude: -33.99480901
+					},
+					"	Melton Rose , Regional Library": {
+						latitude: 18.71693763,
+						longitude: -33.98775837
+					},
+					"Lansdowne, Community Library": {
+						latitude: 18.50520564,
+						longitude: -33.99176628
+					},
+					"Nyanga, Community Library": {
+						latitude: 18.58651135,
+						longitude: -33.99563434
+					},
+					"Delft South, Community Library": {
+						latitude: 18.63921345,
+						longitude: -33.98600372
+					},
+					"Claremont, Regional Library": {
+						latitude: 18.46741317,
+						longitude: -33.98538553
+					},
+					"Manenberg, Community Library": {
+						latitude: 18.55555152,
+						longitude: -33.99155846
+					},
+					"Rylands, Community Library": {
+						latitude: 18.53436934,
+						longitude: -33.97044301
+					},
+					"Delft, Regional Library": {
+						latitude: 18.64288956,
+						longitude: -33.97357894
+					},
+					"Guguletu, Regional Library": {
+						latitude: 18.56719756,
+						longitude: -33.97681587
+					},
+					"Athlone, Regional Library": {
+						latitude: 18.50480187,
+						longitude: -33.96067227
+					},
+					"Heideveld, Community Library": {
+						latitude: 18.55357426,
+						longitude: -33.96490838
+					},
+					"Rondebosch, Regional Library": {
+						latitude: 18.47187734,
+						longitude: -33.96137552
+					},
+					"Bridgetown, Community Library": {
+						latitude: 18.5275876,
+						longitude: -33.95436443
+					},
+					"Valhalla Park,Community Library": {
+						latitude: 18.56995176,
+						longitude: -33.95300125
+					},
+					"Huguenot Square, Community Library": {
+						latitude: 18.64659705,
+						longitude: -33.94630667
+					},
+					"Mowbray, Community Library": {
+						latitude: 18.47100678,
+						longitude: -33.94912127
+					},
+					"Bishop Lavis, Community Library": {
+						latitude: 18.58315417,
+						longitude: -33.94925165
+					},
+					"Bonteheuwel, Community Library": {
+						latitude: 18.55239964,
+						longitude: -33.95145231
+					},
+					"Langa, Community Library": {
+						latitude: 18.52712895,
+						longitude: -33.94438414
+					},
+					"Belhar, Community Library": {
+						latitude: 18.61465799,
+						longitude: -33.94421554
+					},
+					"Adriaanse, Community Library": {
+						latitude: 18.58475578,
+						longitude: -33.93756723
+					},
+					"Vredehoek, Community Library": {
+						latitude: 18.42714387,
+						longitude: -33.93750558
+					},
+					"Observatory, Community Library": {
+						latitude: 18.47047918,
+						longitude: -33.93793033
+					},
+					"Kloof Street, Community Library": {
+						latitude: 18.40663307,
+						longitude: -33.93497936
+					},
+					"P D Paulse, Community Library": {
+						latitude: 18.67172195,
+						longitude: -33.93157914
+					},
+					"Pinelands, Regional Library": {
+						latitude: 18.51156236,
+						longitude: -33.93432219
+					},
+					"Kuilsriver, Community Library": {
+						latitude: 18.67822409,
+						longitude: -33.92708792
+					},
+					"Woodstock, Community Library": {
+						latitude: 18.45028807,
+						longitude: -33.92877612
+					},
+					"Woodstock, Community Library": {
+						latitude: 18.45028807,
+						longitude: -33.92877612
+					},
+					"Elsies River, Community Library": {
+						latitude: 18.57399974,
+						longitude: -33.92896065
+					},
+					"Ravensmead, Community Library": {
+						latitude: 18.60333965,
+						longitude: -33.92240664
+					},
+					"Bellville South, Community Library": {
+						latitude: 18.6426775,
+						longitude: -33.91524959
+					},
+					"Kensington, Community Library": {
+						latitude: 18.51163727,
+						longitude: -33.90947026
+					},
+					"Brooklyn, Community Library": {
+						latitude: 18.48999439,
+						longitude: -33.90039143
+					},
+					"Bellville, City-wide Library": {
+						latitude: 18.62440363,
+						longitude: -33.90222577
+					},
+					"Goodwood, Regional Library": {
+						latitude: 18.55059631,
+						longitude: -33.91131233
+					},
+					"Parow, Regional Library": {
+						latitude: 18.58710964,
+						longitude: -33.90325917
+					},
+					"Tygervalley, Community Library": {
+						latitude: 18.63429994,
+						longitude: -33.874461
+					},
+					"Edgemead, Regional Library": {
+						latitude: 18.54279627,
+						longitude: -33.8804455
+					},
+					"Scottsdene,Community Library": {
+						latitude: 18.72150099,
+						longitude: -33.866623
+					},
+					"Milnerton, Regional Library": {
+						latitude: 18.49795861,
+						longitude: -33.86819226
+					},
+					"Eikendal, Community Library": {
+						latitude: 18.72196108,
+						longitude: -33.8525197
+					},
+					"Bothasig, Community Library": {
+						latitude: 18.54377239,
+						longitude: -33.8625753
+					},
+					"Kraaifontein, Community Library": {
+						latitude: 18.70548133,
+						longitude: -33.84124917
+					},
+					"Durbanville, Regional Library": {
+						latitude: 18.64487048,
+						longitude: -33.82975281
+					},
+					"Table View, Regional Library": {
+						latitude: 18.48816625,
+						longitude: -33.82777057
+					},
+					"Bloubergstrand, Community Library": {
+						latitude: 18.46021659,
+						longitude: -33.80099663
+					},
+					"Sir Lowry's Pass, Community Library": {
+						latitude: 18.9078949,
+						longitude: -34.1195685
+					},
+					"Brakenfell, Regional Library": {
+						latitude: 18.68824381,
+						longitude: -33.87664545
+					},
+					"Leonsdale, Community Library": {
+						latitude: 18.57569542,
+						longitude: -33.91943353
+					},
+					"Lwandle, Community Library": {
+						latitude: 18.86488685,
+						longitude: -34.11856797
+					},
+					"Sea Point, Community Library": {
+						latitude: 18.39776526,
+						longitude: -33.90757012
+					},
+					"Central, City-wide Library": {
+						latitude: 18.42367592,
+						longitude: -33.9252791
+					},
+					"Nazeema Isaacs, Community Library": {
+						latitude: 18.70452824,
+						longitude: -34.04741615
+					},
+					"Masiphumilele, Satellite Library": {
+						latitude: 18.37815372,
+						longitude: -34.1283051
+					},
+					"Fisantekraal, Community Library": {
+						latitude: 18.71741369,
+						longitude: -33.78239463
+					},
+					"Harare, Community Library": {
+						latitude: 18.67135539,
+						longitude: -34.05836239
+					},
 
-<script>
-$(function() {
-	var cities = {
-    "Simon's Town , Community Library": {
-      latitude: 18.43675782,
-      longitude: -34.19380909
-    },
-    "Ocean View, Community Library": {
-      latitude: 18.35168538,
-      longitude: -34.14861945
-    },
-    "Kommetjie , Community Library": {
-      latitude: 18.32418372,
-      longitude: -34.14107253
-    },
-    "Fish Hoek , Regional Library": {
-      latitude: 18.4262567,
-      longitude: -34.13654747
-    },
-    "Muizenberg , Community Library": {
-      latitude: 18.47074576,
-      longitude: -34.1067818
-    },
-    "Hangberg , Community Library": {
-      latitude: 18.34198515,
-      longitude: -34.05339814
-    },
-    "Masakhane , Regional Library": {
-      latitude:   18.66870343,
-      longitude: - 34.04708542
-    },
-    "Imizamo Yethu, Satellite Library": {
-      latitude:     18.36017137,
-      longitude:  - 34.02982609
-    },
-    "Hout Bay, Community Library": {
-      latitude:     18.35836097 ,
-      longitude: - 34.04399894
-    },
-    "Camps Bay, Community Library": {
-      latitude:    18.37765926,
-      longitude: - 33.95378538
-    },
-    "Crossroads, Community Library": {
-      latitude:      18.59694877,
-      longitude: - 33.99829735
-    },
-    "Wesfleur, Regional Library": {
-      latitude:      18.493912 ,
-      longitude: - 33.56476809
-    },
-    " Mamre, Community Library": {
-      latitude:       18.4764602,
-      longitude:- 33.51336321
-    },
-    " Avondale, Community Library": {
-      latitude: 18.48596708,
-      longitude:-33.57066369
-    },
-    " Koeberg, Community Library": {
-      latitude: 18.44599113,
-      longitude:-33.69311487
-    },
-    " Moses Mabhida, Community Library": {
-      latitude: 18.65105351	,
-      longitude: -34.01362094
-    },
-    " Mfuleni, Community Library": {
-      latitude: 18.68194942	,
-      longitude: 	-34.00394126
-    },
-    " 	Brown's Farm, Community Library": {
-      latitude: 18.58538859,
-      longitude: 	-34.00561138
-    },
-    " Phillipi East, Community Library": {
-      latitude: 18.60783875,
-      longitude: -34.01015166
-    },
-    " Maitland, Community Library": {
-      latitude: 18.48707473,
-      longitude: -33.9235559
-    },
-    "Gordon's Bay , Community Library": {
-      latitude: 18.87018468,
-      longitude:	-34.15708177
-    },
-    "Suider Strand , Community Library": {
-      latitude: 18.84138728,
-      longitude:-34.12796685
-    },
-    "Strand , Community Library": {
-      latitude: 18.83000612,
-      longitude:-34.11447245
-    },
-    "Helderzicht , Community Library": {
-      latitude: 18.83477516,
-      longitude:-34.08915583
-    },
-    "Somerset West , Regional Library": {
-      latitude: 18.84900011,
-      longitude:-34.08400518
-    },
-    "Strandfontein, Community Library": {
-      latitude: 18.55453144,
-      longitude:-34.07209846
-    },
-    "Rocklands, Community Library": {
-      latitude: 18.61130956,
-      longitude:-34.06456709
-    },
-    "Tokai, Community Library": {
-      latitude:18.43873418,
-      longitude:	-34.06320128
-    },
-    "Tafelsig, Community Library": {
-      latitude:18.63699329,
-      longitude:	-34.06191143
-    },
-    "Pelican Park ,Satellite Library": {
-      latitude:18.52709733,
-      longitude:-34.06182357
-    },
-    "Macassar , Community Library": {
-      latitude:18.76356549,
-      longitude:-34.06263711
-    },
-    "Retreat , Community Library": {
-      latitude:18.47618764,
-      longitude:-34.06299394
-    },
-    "Westridge , Community Library": {
-      latitude:18.60295414,
-      longitude:-34.05218937
-    },
-    "Mitchell's Plain , Regional Library": {
-      latitude:18.62346141,
-      longitude:-34.04867507
-    },
-    "Grassy Park, Regional Library": {
-      latitude:18.4956521,
-      longitude:	-34.04906935
-    },
-    "Kulani, Community Library": {
-      latitude:18.66014392,
-      longitude:-34.04236738
-    },
-    "Meadowridge, Regional Library": {
-      latitude:18.45424306,
-      longitude:-34.03911947
-    },
-    "Lotus River, Community Library": {
-      latitude:18.52014717,
-      longitude:-34.04131441
-    },
-    "Ottery , Satellite Library": {
-      latitude:18.51646303,
-      longitude:-34.02842626
-    },
-    "Weltevreden , Community Library ": {
-      latitude:18.57977644,
-      longitude:-34.01827679
-    },
-    "Khayelitsha , Community Library": {
-      latitude:18.6655944,
-      longitude:-34.02614266
-    },
-    "Lentegeur , Community Library": {
-      latitude:18.60978347,
-      longitude:-34.03380225
-    },
-    "Plumstead , Community Library": {
-      latitude:18.46782409,
-      longitude:-34.02099283
-    },
-    "Southfield , Community Library": {
-      latitude:18.4807621,
-      longitude:-34.03023781
-    },
-    "Eersteriver , Community Library": {
-      latitude:18.72465962,
-      longitude:-34.00877047
-    },
-    "Wynberg , Regional Library": {
-      latitude:18.46760428,
-      longitude:-34.00522959
-    },
-    "Hanover Park , Community Library": {
-      latitude:18.52725235,
-      longitude:-33.99480901
-    },
-    "	Melton Rose , Regional Library": {
-      latitude:18.71693763,
-      longitude:-33.98775837
-    },
-    "Lansdowne, Community Library": {
-      latitude:18.50520564,
-      longitude:-33.99176628
-    },
-    "Nyanga, Community Library": {
-      latitude:18.58651135,
-      longitude:-33.99563434
-    },
-    "Delft South, Community Library": {
-      latitude:18.63921345,
-      longitude:-33.98600372
-    },
-    "Claremont, Regional Library": {
-      latitude:18.46741317,
-      longitude:-33.98538553
-    },
-    "Manenberg, Community Library": {
-      latitude:18.55555152	,
-      longitude:-33.99155846
-    },
-    "Rylands, Community Library": {
-      latitude:18.53436934,
-      longitude:-33.97044301
-    },
-    "Delft, Regional Library": {
-      latitude:18.64288956,
-      longitude:-33.97357894
-    },
-    "Guguletu, Regional Library": {
-      latitude:18.56719756,
-      longitude:-33.97681587
-    },
-    "Athlone, Regional Library": {
-      latitude:18.50480187,
-      longitude:-33.96067227
-    },
-    "Heideveld, Community Library": {
-      latitude:18.55357426,
-      longitude:-33.96490838
-    },
-    "Rondebosch, Regional Library": {
-      latitude:18.47187734,
-      longitude:-33.96137552
-    },
-    "Bridgetown, Community Library": {
-      latitude:18.5275876,
-      longitude:-33.95436443
-    },
-    "Valhalla Park,Community Library": {
-      latitude:18.56995176,
-      longitude:-33.95300125
-    },
-    "Huguenot Square, Community Library": {
-      latitude:18.64659705,
-      longitude:-33.94630667
-    },
-    "Mowbray, Community Library": {
-      latitude:18.47100678,
-      longitude:-33.94912127
-    },
-    "Bishop Lavis, Community Library": {
-      latitude:18.58315417,
-      longitude:-33.94925165
-    },
-    "Bonteheuwel, Community Library": {
-      latitude:18.55239964,
-      longitude:-33.95145231
-    },
-    "Langa, Community Library": {
-      latitude:18.52712895,
-      longitude:-33.94438414
-    },
-    "Belhar, Community Library": {
-      latitude:18.61465799,
-      longitude:-33.94421554
-    },
-    "Adriaanse, Community Library": {
-      latitude:18.58475578,
-      longitude:-33.93756723
-    },
-    "Vredehoek, Community Library": {
-      latitude:18.42714387,
-      longitude:-33.93750558
-    },
-    "Observatory, Community Library": {
-      latitude:18.47047918,
-      longitude:-33.93793033
-    },
-    "Kloof Street, Community Library": {
-      latitude:18.40663307,
-      longitude:-33.93497936
-    },
-    "P D Paulse, Community Library": {
-      latitude:18.67172195,
-      longitude:-33.93157914
-    },
-    "Pinelands, Regional Library": {
-      latitude:18.51156236,
-      longitude:-33.93432219
-    },
-    "Kuilsriver, Community Library": {
-      latitude:18.67822409,
-      longitude:-33.92708792
-    },
-    "Woodstock, Community Library": {
-      latitude:18.45028807,
-      longitude:-33.92877612
-    },
-    "Woodstock, Community Library": {
-      latitude:18.45028807,
-      longitude:-33.92877612
-    },
-    "Elsies River, Community Library": {
-      latitude:18.57399974,
-      longitude:-33.92896065
-    },
-    "Ravensmead, Community Library": {
-      latitude:18.60333965,
-      longitude:-33.92240664
-    },
-    "Bellville South, Community Library": {
-      latitude:18.6426775,
-      longitude:-33.91524959
-    },
-    "Kensington, Community Library": {
-      latitude:18.51163727,
-      longitude:-33.90947026
-    },
-    "Brooklyn, Community Library": {
-      latitude: 18.48999439,
-      longitude: -33.90039143
-    },
-    "Bellville, City-wide Library": {
-      latitude: 18.62440363	,
-      longitude: -33.90222577
-    },
-    "Goodwood, Regional Library": {
-      latitude: 18.55059631	,
-      longitude:	-33.91131233
-    },
-    "Parow, Regional Library": {
-      latitude: 18.58710964	,
-      longitude:-33.90325917
-    },
-    "Tygervalley, Community Library": {
-      latitude: 18.63429994	,
-      longitude:-33.874461
-    },
-    "Edgemead, Regional Library": {
-      latitude: 18.54279627	,
-      longitude:-33.8804455
-    },
-    "Scottsdene,Community Library": {
-      latitude: 18.72150099	,
-      longitude:-33.866623
-    },
-    "Milnerton, Regional Library": {
-      latitude: 18.49795861,
-      longitude:-33.86819226
-    },
-    "Eikendal, Community Library": {
-      latitude: 18.72196108,
-      longitude:-33.8525197
-    },
-    "Bothasig, Community Library": {
-      latitude:18.54377239,
-      longitude:-33.8625753
-    },
-    "Kraaifontein, Community Library": {
-      latitude:18.70548133,
-      longitude:-33.84124917
-    },
-    "Durbanville, Regional Library": {
-      latitude:18.64487048,
-      longitude:-33.82975281
-    },
-    "Table View, Regional Library": {
-      latitude:18.48816625,
-      longitude:-33.82777057
-    },
-    "Bloubergstrand, Community Library": {
-      latitude:18.46021659,
-      longitude:-33.80099663
-    },
-    "Sir Lowry's Pass, Community Library": {
-      latitude:18.9078949,
-      longitude:-34.1195685
-    },
-    "Brakenfell, Regional Library": {
-      latitude:18.68824381,
-      longitude:-33.87664545
-    },
-    "Leonsdale, Community Library": {
-      latitude:18.57569542,
-      longitude:-33.91943353
-    },
-    "Lwandle, Community Library": {
-      latitude:18.86488685,
-      longitude:-34.11856797
-    },
-    "Sea Point, Community Library": {
-      latitude:18.39776526,
-      longitude:-33.90757012
-    },
-    "Central, City-wide Library": {
-      latitude:18.42367592,
-      longitude:-33.9252791
-    },
-    "Nazeema Isaacs, Community Library": {
-      latitude:18.70452824,
-      longitude:-34.04741615
-    },
-    "Masiphumilele, Satellite Library": {
-      latitude:18.37815372,
-      longitude:-34.1283051
-    },
-    "Fisantekraal, Community Library": {
-      latitude:18.71741369,
-      longitude:-33.78239463
-    },
-    "Harare, Community Library": {
-      latitude:18.67135539,
-      longitude:-34.05836239
-    },
+				};
 
-  };
+				var unitLabels = {
+					"m": "Meters",
+					"km": "Kilometers",
+					"cm": "Centimeters",
+					"mm": "Millimeters",
+					"mi": "Miles",
+					"sm": "Seamiles",
+					"ft": "Feet",
+					"in": "Inches",
+					"yd": "Yards"
+				};
 
-	var unitLabels = {
-		"m" : "Meters",
-		"km": "Kilometers",
-		"cm": "Centimeters",
-		"mm": "Millimeters",
-		"mi": "Miles",
-		"sm": "Seamiles",
-		"ft": "Feet",
-		"in": "Inches",
-		"yd": "Yards"
-	};
-
-	var option;
-	$.each(cities, function(key, value) {
-		option = $('<option />').val(key).text(key);
-		$('select[name^="city"]').append(option);
-	});
+				var option;
+				$.each(cities, function(key, value) {
+					option = $('<option />').val(key).text(key);
+					$('select[name^="city"]').append(option);
+				});
 
 
-	$('select[name="city1"], select[name="city2"], select[name="unit"]').on('change', function() {
+				$('select[name="city1"], select[name="city2"], select[name="unit"]').on('change', function() {
 
-		if($('select[name="city1"]').val() && $('select[name="city2"]').val()) {
+					if ($('select[name="city1"]').val() && $('select[name="city2"]').val()) {
 
-			try {
+						try {
 
-				var distance = geolib.getDistance(
-					cities[$('[name="city1"]').val()],
-					cities[$('[name="city2"]').val()]
-				);
+							var distance = geolib.getDistance(
+								cities[$('[name="city1"]').val()],
+								cities[$('[name="city2"]').val()]
+							);
 
-				var converted = geolib.convertUnit(
-					$('[name="unit"]').val(), distance
-				);
+							var converted = geolib.convertUnit(
+								$('[name="unit"]').val(), distance
+							);
 
-				var direction = geolib.getCompassDirection(
-					cities[$('[name="city1"]').val()],
-					cities[$('[name="city2"]').val()]
-				);
+							var direction = geolib.getCompassDirection(
+								cities[$('[name="city1"]').val()],
+								cities[$('[name="city2"]').val()]
+							);
 
-				$('#distance').find('.result').html(
-					'Distance from <br><strong>'
-					+ $('[name="city1"] option:selected').text()
-					+ '</strong> ('
-					+ geolib.latitude(cities[$('[name="city1"] option:selected').text()])
-					+ ', '
-					+ geolib.longitude(cities[$('[name="city1"] option:selected').text()])
-					+ ') to <br><strong>'
-					+ $('[name="city2"] option:selected').text()
-					+ '</strong> ('
-					+ geolib.latitude(cities[$('[name="city2"] option:selected').text()])
-					+ ', '
-					+ geolib.longitude(cities[$('[name="city2"] option:selected').text()])
-					+') is <strong style="text-decoration: underline">'
-					+ converted + ' '
-					+ $('[name="unit"]').val()
-					+ '</strong>.<br> Compass direction is <strong>'
-					+ direction.rough
-					+ '/'
-					+ direction.exact
-					+ '</strong>'
-				);
-			} catch (e) {
+							$('#distance').find('.result').html(
+								'Distance from <br><strong>' +
+								$('[name="city1"] option:selected').text() +
+								'</strong> (' +
+								geolib.latitude(cities[$('[name="city1"] option:selected').text()]) +
+								', ' +
+								geolib.longitude(cities[$('[name="city1"] option:selected').text()]) +
+								') to <br><strong>' +
+								$('[name="city2"] option:selected').text() +
+								'</strong> (' +
+								geolib.latitude(cities[$('[name="city2"] option:selected').text()]) +
+								', ' +
+								geolib.longitude(cities[$('[name="city2"] option:selected').text()]) +
+								') is <strong style="text-decoration: underline">' +
+								converted + ' ' +
+								$('[name="unit"]').val() +
+								'</strong>.<br> Compass direction is <strong>' +
+								direction.rough +
+								'/' +
+								direction.exact +
+								'</strong>'
+							);
+						} catch (e) {
 
-				alert(e);
+							alert(e);
 
-			}
+						}
 
-		}
+					}
 
-	});
-
-
-	$('select[name="city1"]').on('change', function() {
-
-		var val = $('select[name="city1"]').val();
-
-		$('select[name="city2"]').find('option').removeAttr('disabled');
-		$('select[name="city2"]').find('option[value="'+val+'"]').attr('disabled', 'disabled');
-
-	});
+				});
 
 
-	$('select[name="city2"]').on('change', function() {
+				$('select[name="city1"]').on('change', function() {
 
-		var val = $('select[name="city2"]').val();
+					var val = $('select[name="city1"]').val();
 
-		$('select[name="city1"]').find('option').removeAttr('disabled');
-		$('select[name="city1"]').find('option[value="'+val+'"]').attr('disabled', 'disabled');
+					$('select[name="city2"]').find('option').removeAttr('disabled');
+					$('select[name="city2"]').find('option[value="' + val + '"]').attr('disabled', 'disabled');
 
-	});
-
-
-	$('select[name="city3"], select[name="unit"]').on('change', function() {
-
-		if($('[name="city3"]').val() == '') {
-			return;
-		}
-
-		var nearest = geolib.findNearest(
-			cities[$('[name="city3"]').val()],
-			cities,
-			1
-		);
-
-		$('#nearest').html(
-			'Nearest library from <strong>'
-			+ $('[name="city3"] option:selected').text()
-			+ '</strong> is <strong>'
-			+ nearest.key
-			+ '</strong> ('
-			+ geolib.convertUnit($('[name="unit"]').val(), nearest.distance)
-			+ ' '
-			+ $('[name="unit"]').val()
-			+ ')'
-		);
+				});
 
 
-	});
+				$('select[name="city2"]').on('change', function() {
 
-});
-</script>
+					var val = $('select[name="city2"]').val();
 
-</body>
+					$('select[name="city1"]').find('option').removeAttr('disabled');
+					$('select[name="city1"]').find('option[value="' + val + '"]').attr('disabled', 'disabled');
+
+				});
+
+
+				$('select[name="city3"], select[name="unit"]').on('change', function() {
+
+					if ($('[name="city3"]').val() == '') {
+						return;
+					}
+
+					var nearest = geolib.findNearest(
+						cities[$('[name="city3"]').val()],
+						cities,
+						1
+					);
+
+					$('#nearest').html(
+						'Nearest library from <strong>' +
+						$('[name="city3"] option:selected').text() +
+						'</strong> is <strong>' +
+						nearest.key +
+						'</strong> (' +
+						geolib.convertUnit($('[name="unit"]').val(), nearest.distance) +
+						' ' +
+						$('[name="unit"]').val() +
+						')'
+					);
+
+
+				});
+
+			});
+		</script>
+
+	</body>
 </container>
+
 </html>
