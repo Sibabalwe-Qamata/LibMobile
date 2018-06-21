@@ -7,6 +7,7 @@
   font-size: 20px;
   text-align: left;
   padding-top: 2%;
+  font-weight: bold;
 }
 img{
   margin-top: 2%;
@@ -62,7 +63,6 @@ button:hover{
     display: block;
     text-align: left;
 }
-
 /* .dropdown-content a:hover {background-color: #f1f1f1} */
 
 .dropdown:hover .dropdown-content {
