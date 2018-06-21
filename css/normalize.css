@@ -1,5 +1,214 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+* {
+	margin: 0;
+	padding: 0;
+}
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
 
+body {
+	background: white;
+	color: #333;
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+h1, h2, h3 {
+	font-family: "Georgia", serif;
+	font-weight: normal;
+}
+
+h2, h3 {
+	margin: 0 0 0.5em 0;
+}
+
+h1 {
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	font-size: 110%;
+	font-style: italic;
+}
+
+p {
+	margin: 0.75em 0;
+}
+
+ul {
+	margin-left: 1.5em;
+}
+
+select, input {
+	padding: 4px;
+	margin: 2px 0;
+}
+
+button {
+	padding: 4px 8px;
+}
+
+#wrapper {
+	padding: 4px;
+}
+
+.box {
+	float: left;
+	min-width: 280px;
+	width: 25%;
+	box-sizing: border-box;
+	padding: 4px;
+	width: 100%;
+}
+
+.box .inner {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	height: 310px;
+	padding: 10px;
+	/*margin: 4px;*/
+	overflow: auto;
+	/*width: 360px;*/
+	width: 100%;
+}
+
+.highlight {
+	background: #eee;
+}
+
+.small {
+	width: 100px;
+}
+
+.error {
+	color: #C00;
+}
+
+@media all and (max-width: 1144px) {
+	.box {
+		width: 33.3%;
+	}
+}
+
+@media all and (max-width: 864px) {
+	.box {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 584px) {
+	.box {
+		width: 100%;
+	}
+}
+
+body {
+	background: white;
+	color: #333;
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+h1, h2, h3 {
+	font-family: "Georgia", serif;
+	font-weight: normal;
+}
+
+h2, h3 {
+	margin: 0 0 0.5em 0;
+}
+
+h1 {
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	font-size: 110%;
+	font-style: italic;
+}
+
+p {
+	margin: 0.75em 0;
+}
+
+ul {
+	margin-left: 1.5em;
+}
+
+select, input {
+	padding: 4px;
+	margin: 2px 0;
+}
+
+button {
+	padding: 4px 8px;
+}
+
+#wrapper {
+	padding: 4px;
+}
+
+.box {
+	float: left;
+	min-width: 280px;
+	width: 25%;
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+.box .inner {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	height: 310px;
+	padding: 10px;
+	/*margin: 4px;*/
+	overflow: auto;
+	/*width: 360px;*/
+	width: 100%;
+}
+
+.highlight {
+	background: #eee;
+}
+
+.small {
+	width: 100px;
+}
+
+.error {
+	color: #C00;
+}
+
+@media all and (max-width: 1144px) {
+	.box {
+		width: 33.3%;
+	}
+}
+
+@media all and (max-width: 864px) {
+	.box {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 584px) {
+	.box {
+		width: 100%;
+	}
+}
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
